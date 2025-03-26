@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1"><!-- 设置字符编码为UTF-8，窗口-->
+    <title>进击的幽灵</title>
+    <link rel="stylesheet" href="style.css"><!-- 引入CSS样式表 -->
+</head>
+<body>
+
+<!--创建游戏区-->
+<div id="gameArea">
+    <div id="player" class="character">
+        <div class="healthBar" id="playerHealthBar"></div> <!--玩家血量条*/-->
+    </div>
+
+</div>
+<div id="infoPanel">
+        <h3>角色信息</h3>
+        生命值: <span id="health">100/100</span> <br>
+        攻击力: <span id="attackDamage">30</span> <br>
+        耐力值：<span id="stamina">100</span> <br>
+        可用点数: <span id="availablePoints">0</span> <br>
+        <button id="increaseHealth">增加生命上限</button>
+        <button id="increaseDamage">增加伤害</button>
+</div>
+<div id="information">
+    分数: <span id="score">0</span> <!-- 显示玩家分数 -->
+    <br>
+    按下WSAD控制角色移动,空格键攻击
+</div>
+
+<div id="message" style="display: none;"></div> <!-- 提示信息区域 -->
+
+<script src="game.js"></script>
+</body>
+</html>

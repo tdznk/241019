@@ -1,0 +1,92 @@
+/* 设置页面样式 */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使页面高度与显示器大小相同 */
+    /*background-color: #f0f0f0; /* 背景颜色，与游戏界面区分 */
+    background-image: url('320.jpg');
+}
+/* 设置游戏区域样式 */
+#gameArea {
+    position: relative;
+    width: 600px;/*设置窗口宽度*/
+    height: 400px;/*设置窗口高度*/
+    background-color: #ffffff; /* 游戏区域背景颜色 */
+    border: 2px solid #000000; /* 边框 */
+    overflow: hidden; /* 隐藏超出边界的部分，确保角色不会在边框外 */
+}
+/* 角色、敌人和道具的基础样式 */
+.character, .enemy, .item {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover; /* 背景图片覆盖整个元素 */
+}
+/* 玩家图标 */
+.character {
+    background-image: url('player.png'); /* 玩家图标 */
+}
+/* 敌人图标 */
+.enemy {
+    background-image: url('enemy.png'); /* 敌人图标 */
+}
+/* 生命回复道具图标 */
+.heal-item {
+    background-image: url('heal-item.png'); /* 生命回复道具 */
+}
+/* 双倍攻击道具图标 */
+.boost-item {
+    background-image: url('boost-item.png'); /* 增强攻击道具 */
+}
+/*耐力回复道具图标*/
+.stamina-item {
+    background-image: url('stamina-item.png'); /* 耐力回复道具 */
+}
+/*增强防御道具图标*/
+.reducedDamage-item {
+    background-image: url('reducedDamage-item.png'); /* 增强防御道具 */
+}
+/* 血量条样式 */
+.healthBar {
+    position: absolute;
+    width: 40px; /* 血量条宽度，与角色同宽 */
+    height: 5px; /* 血量条高度 */
+    background-color: rgb(0, 207, 0); /* 血量条颜色 */
+    /*padding-right: 15%;*/
+    /* 边框border: 1px solid #000000;  */
+    top: -10px; /* 位置偏移 */
+    left: 0;
+}
+
+/* 信息展示样式 */
+#information {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px; /* 信息字体大小 */
+    background-color: #ffffff;
+    border: 1px solid #000000e0;
+}
+/* 提示信息样式 */
+#message {
+    margin-top: 10px;
+    font-size: 16px; /* 提示信息字体大小 */
+    color: blue; /* 提示信息颜色 */
+}
+/* 角色信息栏样式 */
+#infoPanel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    padding: 10px;
+    width: 150px; /* 信息栏宽度 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#infoPanel button {
+    margin-top: 5px;
+    width: 100%; /* 按钮宽度 */
+    padding: 5px;
+}
